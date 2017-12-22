@@ -10,7 +10,7 @@ import fr.sparkit.socle.java.entities.User;
 @Repository
 public interface UserDao extends JpaRepository<User, Integer> {
 
-    List<User> findByFirstname(String firstname);
+    List<User> findByFirstName(String firstname);
 
     List<User> findById(Long id);
 
