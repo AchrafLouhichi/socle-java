@@ -32,5 +32,6 @@ local.properties
 
 *.log
 *.springBeans
+*.mvn
 
 

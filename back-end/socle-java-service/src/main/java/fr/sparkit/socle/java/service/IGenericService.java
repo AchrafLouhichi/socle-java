@@ -4,9 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.data.domain.Sort;
-import org.springframework.transaction.annotation.Transactional;
 
-@Transactional
 public interface IGenericService<T, ID extends Serializable> {
 
     List<T> findAll();

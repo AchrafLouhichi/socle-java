@@ -20,8 +20,8 @@ public class UserService extends GenericService<User, Integer> implements IUserS
     }
 
     @Override
-    public List<User> findByFirstname(String firstname) {
-	return userDao.findByFirstname(firstname);
+    public List<User> findByFirstName(String firstname) {
+	return userDao.findByFirstName(firstname);
     }
 
     @Override
