@@ -19,8 +19,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    def workspace = pwd()
-	sh 'echo ${workspace}'
+    
+	sh "echo ${env.WORKSPACE}"
    
 }
 
