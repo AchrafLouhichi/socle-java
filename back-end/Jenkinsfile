@@ -6,7 +6,7 @@ node {
     checkout scm
 	sh 'cd back-end/'
     sh "pwd"
-    mvn 'clean install'
+    mvn '-f /back-end/pom.xml clean install '
     
 }
 
