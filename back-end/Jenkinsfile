@@ -4,9 +4,7 @@
 stage 'Dev'
 node {
     checkout scm
-	sh 'cd back-end/'
-    sh "pwd"
-    mvn '-f /back-end/pom.xml clean install '
+    mvn ' clean install '
     
 }
 
@@ -22,7 +20,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
    
-    sh "mvn ${args}"
+    sh "mvn -f $(pwd)/back-end/pom.xml  ${args}"
 }
 
 def runTests(duration) {
