@@ -20,7 +20,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
    
-    sh 'mvn -f echo %cd% /back-end/pom.xml  ${args}'
+    sh 'mvn -f \back-end\pom.xml  ${args}'
 }
 
 def runTests(duration) {
