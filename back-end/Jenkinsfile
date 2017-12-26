@@ -19,7 +19,7 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-  
+    sh 'pwd'
     sh 'mvn -f /back-end/pom.xml  ${args}'
 }
 
