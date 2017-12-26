@@ -23,7 +23,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
 
-   sh 'hhhh $PATH'
+   sh 'echo hhhh $PATH'
    
 }
 
