@@ -1,6 +1,6 @@
 #!groovy
 
-sh "cd back-end"
+
 stage 'Dev'
 node {
     checkout scm
@@ -20,6 +20,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
+    sh "cd back-end"
+    sh "ls -la ${pwd()}"
     sh "mvn ${args}"
 }
 
