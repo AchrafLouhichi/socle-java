@@ -19,8 +19,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    h=sh 'pwd'
-	sh 'echo ${h} hhh'
+
+	sh 'echo pwd() hhh'
     sh 'mvn -f /c/Program Files (x86)/Jenkins/workspace/socleJavaPipelinedev_master-DEK2AHBKCJP6VRO2K4VID3MCJVSJAMKS627NWEE5NNS7GEKEJRHQ/back-end/pom.xml  ${args}'
 }
 
