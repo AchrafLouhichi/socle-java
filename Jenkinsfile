@@ -4,7 +4,8 @@
 stage 'Dev'
 node {
     checkout scm
-	
+	sh "cd back-end"
+    sh "pwd"
     mvn 'clean install'
     
 }
@@ -20,8 +21,7 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    sh "cd back-end"
-    sh "pwd"
+   
     sh "mvn ${args}"
 }
 
