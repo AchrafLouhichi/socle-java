@@ -9,6 +9,7 @@ node {
 }
 environment {
     PATH = "$PATH"
+	WORKSPACE="$WORKSPACE"
   }
 
 stage 'QA'
@@ -23,7 +24,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
 
-   sh 'echo hhhh $PATH'
+   sh 'echo hhhh $WORKSPACE'
    
 }
 
