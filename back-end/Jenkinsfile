@@ -22,7 +22,7 @@ def mvn(args) {
 
 	sh 'echo hhh env.WORKSPACE'
 	sh 'echo hhh ${env.WORKSPACE}'
-	sh "echo ${env.WORKSPACE}"
+	echo ${env.WORKSPACE}
    
 }
 
