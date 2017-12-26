@@ -4,7 +4,6 @@
 stage 'Dev'
 node {
     checkout scm
-	sh "echo hhh ${env.WORKSPACE}"
     mvn ' clean install '
     
 }
@@ -20,8 +19,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    
-	
+
+	sh 'echo hhh'
    
 }
 
