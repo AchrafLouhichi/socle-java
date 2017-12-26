@@ -4,6 +4,7 @@
 stage 'Dev'
 node {
     checkout scm
+	sh "echo ${env.WORKSPACE}"
     mvn ' clean install '
     
 }
@@ -20,7 +21,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
     
-	sh "echo ${env.WORKSPACE}"
+	
    
 }
 
