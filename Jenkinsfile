@@ -19,7 +19,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
     sh "cd back-end"
-    sh "mvn"
+    sh "mvn ${args}"
 }
 
 def runTests(duration) {
