@@ -4,7 +4,7 @@
 stage 'Dev'
 node {
     checkout scm
-	cd back-end
+	sh 'cd back-end/'
     sh "pwd"
     mvn 'clean install'
     
