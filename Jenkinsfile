@@ -3,7 +3,7 @@
 stage 'Dev'
 node {
     checkout scm
-    mvn
+    mvn 'clean install'
     
 }
 
