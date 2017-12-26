@@ -21,7 +21,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
     sh "cd back-end"
-    sh "ls -la ${pwd()}"
+    sh "pwd"
     sh "mvn ${args}"
 }
 
