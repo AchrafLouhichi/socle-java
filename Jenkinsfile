@@ -18,8 +18,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    cd '/back-end'
-    sh "mvn ${args}"
+    cd "/back-end"
+    sh "mvn"
 }
 
 def runTests(duration) {
