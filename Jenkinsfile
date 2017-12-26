@@ -19,6 +19,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
     sh "cd back-end"
+	echo "pwd"
     sh "mvn ${args}"
 }
 
