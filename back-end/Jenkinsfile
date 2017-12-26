@@ -20,7 +20,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
 
-	sh 'echo hhh'
+	sh 'echo hhh env.WORKSPACE'
    
 }
 
