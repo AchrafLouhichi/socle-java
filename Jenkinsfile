@@ -1,9 +1,10 @@
 #!groovy
 
+sh "cd back-end"
 stage 'Dev'
 node {
     checkout scm
-	sh "cd back-end"
+	
     mvn 'clean install'
     
 }
