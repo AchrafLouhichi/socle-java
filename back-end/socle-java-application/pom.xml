@@ -16,11 +16,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<skip.it>false</skip.it>
 	</properties>
-	
-	<properties>
-    <skip.it>false</skip.it>
-  </properties>
+
 
 	<dependencies>
 		<dependency>
