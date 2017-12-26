@@ -7,6 +7,9 @@ node {
     mvn ' clean install '
     
 }
+environment {
+    PATH = "$PATH"
+  }
 
 stage 'QA'
 parallel(longerTests: {
@@ -20,9 +23,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
 
-	sh 'echo hhh env.WORKSPACE'
-	sh 'echo hhh ${env.WORKSPACE}'
-	echo ${env.WORKSPACE}
+   sh 'hhhh $PATH'
    
 }
 
