@@ -4,7 +4,7 @@
 stage 'Dev'
 node {
     checkout scm
-    build 'clean install '
+    build 'clean install'
 	deploy 'spring-boot:start'
     
 }
@@ -25,7 +25,7 @@ stage name: 'Production', concurrency: 1
 
 def build(args) {
     
-    sh 'mvn ${args} -f back-end/pom.xml  '
+    sh "mvn ${args} -f back-end/pom.xml"
 }
 
 def runTests(duration) {
@@ -35,7 +35,7 @@ def runTests(duration) {
     }
 
 def deploy(id) {
-    sh 'mvn ${args} -f back-end/socle-java-application/pom.xml  '
+    sh "mvn ${args} -f back-end/socle-java-application/pom.xml"
 }
 
 def undeploy(id) {
