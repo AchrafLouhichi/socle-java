@@ -4,7 +4,7 @@
 stage 'Dev'
 node {
     checkout scm
-    mvn ' clean install '
+    mvn 'clean install '
     
 }
 environment {
@@ -25,7 +25,7 @@ stage name: 'Production', concurrency: 1
 
 def mvn(args) {
     sh 'echo path= $WORKSPACE'
-    sh 'mvn -f back-end/pom.xml  ${args}'
+    sh 'mvn clean install -f back-end/pom.xml  '
 }
 
 def runTests(duration) {
