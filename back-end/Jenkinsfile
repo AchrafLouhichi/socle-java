@@ -4,7 +4,8 @@
 stage 'Dev'
 node {
     checkout scm
-    mvn 'clean install '
+    build 'clean install '
+	deploy 'spring-boot:start'
     
 }
 environment {
@@ -22,7 +23,7 @@ parallel(longerTests: {
 
 stage name: 'Production', concurrency: 1
 
-def mvn(args) {
+def build(args) {
     
     sh 'mvn ${args} -f back-end/pom.xml  '
 }
@@ -34,7 +35,7 @@ def runTests(duration) {
     }
 
 def deploy(id) {
-
+    sh 'mvn ${args} -f back-end/socle-java-application/pom.xml  '
 }
 
 def undeploy(id) {
