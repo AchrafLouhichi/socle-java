@@ -10,7 +10,6 @@ node {
 environment {
     PATH = "$PATH"
 	WORKSPACE="$WORKSPACE"
-	WORKSPACE=WORKSPACE.trim()
   }
 
 stage 'QA'
@@ -24,8 +23,8 @@ parallel(longerTests: {
 stage name: 'Production', concurrency: 1
 
 def mvn(args) {
-    sh 'echo path= $WORKSPACE'
-    sh 'mvn clean install -f back-end/pom.xml  '
+    
+    sh 'mvn ${args} -f back-end/pom.xml  '
 }
 
 def runTests(duration) {
