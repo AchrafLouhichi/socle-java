@@ -34,7 +34,7 @@ def runTests(duration) {
         }
     }
 
-def deploy(id) {
+def deploy(args) {
     sh "mvn ${args} -f back-end/socle-java-application/pom.xml"
 }
 
