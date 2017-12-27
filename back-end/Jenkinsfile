@@ -34,7 +34,7 @@ def runTests(duration) {
     }
 
 def deploy(args) {
-   // sh "mvn spring-boot:start -f back-end/socle-java-application/pom.xml"
+    sh "mvn spring-boot:run -f back-end/socle-java-application/pom.xml"
 }
 
 def undeploy(id) {
