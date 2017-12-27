@@ -5,7 +5,6 @@ stage 'Dev'
 node {
     checkout scm
     build 'clean install'
-	deploy 'spring-boot:start'
     
 }
 environment {
@@ -35,7 +34,7 @@ def runTests(duration) {
     }
 
 def deploy(args) {
-    sh "mvn ${args} -f back-end/socle-java-application/pom.xml"
+    sh "mvn spring-boot:start -f back-end/socle-java-application/pom.xml"
 }
 
 def undeploy(id) {
